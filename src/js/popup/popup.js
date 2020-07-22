@@ -127,6 +127,9 @@ const handleMessage = (event: PostMessageEvent): void => {
         case UI.INVALID_PASSPHRASE :
             view.initInvalidPassphraseView(message.payload);
             break;
+        case UI.IFRAME_FAILURE:
+            showView('iframe-failure');
+            break;
     }
 };
 

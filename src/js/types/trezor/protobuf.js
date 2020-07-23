@@ -895,6 +895,14 @@ export type BinanceSignedTx = {
     public_key: string;
 }
 
+export type HederaPublicKey = {
+    public_key: string;
+};
+
+export type HederaSignedTx = {
+    signature: string;
+};
+
 // Reset device flags
 export type ResetDeviceFlags = {
     display_random?: boolean;

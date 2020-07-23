@@ -60,6 +60,8 @@ import EosSignTransaction from './EosSignTransaction';
 import BinanceGetPublicKey from './BinanceGetPublicKey';
 import BinanceGetAddress from './BinanceGetAddress';
 import BinanceSignTransaction from './BinanceSignTransaction';
+import HederaGetPublicKey from './HederaGetPublicKey';
+import HederaSignTransaction from './HederaSignTransaction';
 import VerifyMessage from './VerifyMessage';
 import WipeDevice from './WipeDevice';
 import ApplyFlags from './ApplyFlags';
@@ -125,6 +127,8 @@ const classes: { [k: string]: any } = {
     'binanceGetPublicKey': BinanceGetPublicKey,
     'binanceGetAddress': BinanceGetAddress,
     'binanceSignTransaction': BinanceSignTransaction,
+    'hederaGetPublicKey': HederaGetPublicKey,
+    'hederaSignTransaction': HederaSignTransaction,
     'verifyMessage': VerifyMessage,
     'wipeDevice': WipeDevice,
     'applyFlags': ApplyFlags,

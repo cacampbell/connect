@@ -495,6 +495,26 @@ export default class DeviceCommands {
     }
     // Binance: end
 
+    // Hedera: begin
+    async hederaGetPublicKey(address_n: Array<number>, showOnTrezor: boolean): Promise<trezor.HederaPublicKey> {
+        const response: MessageResponse<trezor.HederaPublicKey> = await this.typedCall('HederaGetPublicKey', 'HederaPublicKey', {
+            address_n,
+            show_display: !!showOnTrezor,
+        });
+
+        return response.message;
+    }
+
+    async hederaSignTransaction(address_n: Array<number>, transaction: string): Promise<trezor.HederaSignedTx> {
+        const response: MessageResponse<trezor.HederaSignedTx> = await this.typedCall('HederaSignTransaction', 'HederaSignedTx', {
+            address_n,
+            transaction,
+        });
+
+        return response.message;
+    }
+    // Hedera: end
+
     async cipherKeyValue(
         address_n: Array<number>,
         key: string,

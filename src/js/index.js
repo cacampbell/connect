@@ -254,6 +254,14 @@ const TrezorConnect: API = {
         return call({ method: 'binanceSignTransaction', ...params });
     },
 
+    hederaGetPublicKey: params => {
+        return call({ method: 'hederaGetPublicKey', ...params });
+    },
+
+    hederaSignTransaction: params => {
+        return call({ method: 'hederaSignTransaction', ...params });
+    },
+
     verifyMessage: params => {
         return call({ method: 'verifyMessage', ...params });
     },

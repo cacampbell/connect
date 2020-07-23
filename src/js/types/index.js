@@ -4,6 +4,7 @@ export * from './api';
 export * from './events';
 export * from './misc';
 export * from './params';
+export * from './hedera';
 
 export * from './account';
 export * from './trezor/device';

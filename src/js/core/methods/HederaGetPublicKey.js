@@ -12,7 +12,6 @@ import { UiMessage } from '../../message/builder';
 
 import type { HederaPublicKey } from '../../types/trezor';
 import type { CoreMessage, UiPromiseResponse } from '../../types';
-import type { HederaPublicKey as HederaPublicKeyResponse } from '../../types/hedera';
 
 type Batch = {
     path: Array<number>;
@@ -92,8 +91,8 @@ export default class HederaGetPublicKey extends AbstractMethod {
         return this.confirmed;
     }
 
-    async run(): Promise<HederaPublicKeyResponse | Array<HederaPublicKeyResponse>> {
-        const responses: Array<HederaPublicKeyResponse> = [];
+    async run(): Promise<HederaPublicKey> {
+        const responses: Array<HederaPublicKey> = [];
 
         for (let i = 0; i < this.params.length; i++) {
             const batch: Batch = this.params[i];

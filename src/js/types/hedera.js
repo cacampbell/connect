@@ -1,15 +1,8 @@
 /* @flow */
 // Hedera types
 
-import type { $Path, $Common } from './params';
-import type { Unsuccessful$ } from './response';
-import type { HederaSignedTx } from './trezor';
-
-export type SignatureAsset = {
-    signature: {
-        publicKey: string;
-    };
-}
+import type { $Path, $Common, Unsuccessful$ } from './params';
+import type { HederaSignedTx } from './trezor/protobuf';
 
 export type $HederaGetPublicKey = $Common & {
     path: $Path;

@@ -42,7 +42,7 @@ export default class HederaSignTransaction extends AbstractMethod {
     }
 
     async run(): Promise<HederaSignedTx> {
-        return await this.device.getCommands().hederaSignTx(
+        return await this.device.getCommands().hederaSignTransaction(
             this.params.path,
             this.params.transaction,
         );
